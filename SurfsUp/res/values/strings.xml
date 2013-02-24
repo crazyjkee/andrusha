@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Surfs Up</string>
+    <string name="dummy_button">Вроде работает</string>
+    <string name="dummy_content">ДЕЛАЙ\nПРОГРАММУ</string>
+    <string name="send">Отправить</string>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/eventbus.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jbullet.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jinput.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-blender.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-core.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-desktop.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-effects.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-jbullet.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-jogg.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-lwjgl.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-lwjgl-natives.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-networking.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-niftygui.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-plugins.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-terrain.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jME3-testdata.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/joal.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/j-ogg-oggd.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/j-ogg-vorbisd.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/jogl-all.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/lwjgl.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/nifty.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/nifty-default-controls.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/nifty-examples.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/nifty-style-black.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/stack-alloc.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/vecmath.jar"/>
+	<classpathentry kind="lib" path="/home/artem/jmonkeyplatform/LIB/xmlpull-xpp3.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
