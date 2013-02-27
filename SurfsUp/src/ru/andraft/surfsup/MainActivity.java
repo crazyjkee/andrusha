@@ -1,7 +1,6 @@
 package ru.andraft.surfsup;
 
 import ru.andraft.surfsup.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
@@ -9,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import ru.andraft.surfsup.materials.*;
 public class MainActivity extends Activity {
 	private static final boolean AUTO_HIDE = true;
 	private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
 		final View buttonsend = findViewById(R.id.button1);
+        final View buttonDummy = findViewById(R.id.dummy_button);
 		mSystemUiHider = SystemUiHider.getInstance(this, contentView,HIDER_FLAGS);
 		mSystemUiHider.setup();
 		mSystemUiHider.setOnVisibilityChangeListener(new SystemUiHider.OnVisibilityChangeListener() {
@@ -35,7 +36,6 @@ public class MainActivity extends Activity {
 							}
 							if (mShortAnimTime == 0) {
 								mShortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
-								
 							}
 							controlsView.animate().translationY(visible ? 0 : mControlsHeight).setDuration(mShortAnimTime);	
 						} else {
@@ -49,7 +49,14 @@ public class MainActivity extends Activity {
 					mSystemUiHider.toggle();
 				} else {
 					mSystemUiHider.show();}}});
-		}
+        buttonDummy.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+               if(TOGGLE_ON_CLICK){
+                  RunMaterials rn = new RunMaterials();
+               }else{
+                       mSystemUiHider.toggle();
+               }}});}
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 		delayedHide(100);}

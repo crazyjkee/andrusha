@@ -6,6 +6,8 @@ import android.view.View;
 
 public abstract class SystemUiHider {
 	public static final int FLAG_LAYOUT_IN_SCREEN_OLDER_DEVICES = 0x1;
+
+
 	public static final int FLAG_FULLSCREEN = 0x2;
 	public static final int FLAG_HIDE_NAVIGATION = FLAG_FULLSCREEN | 0x4;
 	protected Activity mActivity;
@@ -22,7 +24,9 @@ public abstract class SystemUiHider {
 		mActivity = activity;
 		mAnchorView = anchorView;
 		mFlags = flags;
+
 	}
+
 	public abstract void setup();
 	public abstract boolean isVisible();
 	public abstract void hide();
