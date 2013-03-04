@@ -38,7 +38,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="eventbus" level="application" />
+    <orderEntry type="library" name="eventbus" level="project" />
+    <orderEntry type="library" name="android" level="application" />
   </component>
 </module>
 

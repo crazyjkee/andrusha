@@ -1,5 +1,7 @@
 package ru.andraft.surfsup;
 
+import android.app.ActionBar;
+import android.view.MenuInflater;
 import ru.andraft.surfsup.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -8,8 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-import ru.andraft.surfsup.materials.*;
-public class MainActivity extends Activity {
+public class MainActivity extends Activity{
 	private static final boolean AUTO_HIDE = true;
 	private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
 	private static final boolean TOGGLE_ON_CLICK = true;
@@ -31,15 +32,16 @@ public class MainActivity extends Activity {
 					@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
 					public void onVisibilityChange(boolean visible) {
 						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+
 							if (mControlsHeight == 0) {
 								mControlsHeight = controlsView.getHeight();
 							}
 							if (mShortAnimTime == 0) {
 								mShortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 							}
-							controlsView.animate().translationY(visible ? 0 : mControlsHeight).setDuration(mShortAnimTime);	
+							controlsView.animate().translationY(visible ? 0 : mControlsHeight).setDuration(mShortAnimTime);
 						} else {
-							controlsView.setVisibility(visible ? View.VISIBLE: View.GONE);}	
+							controlsView.setVisibility(visible ? View.VISIBLE: View.GONE);}
 						if (visible && AUTO_HIDE) {
 							delayedHide(AUTO_HIDE_DELAY_MILLIS);}}});
 		buttonsend.setOnClickListener(new View.OnClickListener() {
@@ -50,13 +52,15 @@ public class MainActivity extends Activity {
 				} else {
 					mSystemUiHider.show();}}});
         buttonDummy.setOnClickListener(new View.OnClickListener(){
-            @Override
             public void onClick(View view) {
                if(TOGGLE_ON_CLICK){
-                  RunMaterials rn = new RunMaterials();
+                mSystemUiHider.hide();
                }else{
                        mSystemUiHider.toggle();
-               }}});}
+                }}});}
+    protected void onDestroy(Bundle destroy){
+        super.onDestroy();
+    }
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 		delayedHide(100);}
