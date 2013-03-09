@@ -1,7 +1,7 @@
 package ru.andraft.surfsup;
 
-import android.app.ActionBar;
-import android.view.MenuInflater;
+import android.content.Intent;
+import ru.andraft.surfsup.Rawik.RawajalilkaActivity;
 import ru.andraft.surfsup.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -54,9 +54,10 @@ public class MainActivity extends Activity{
         buttonDummy.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                if(TOGGLE_ON_CLICK){
-                mSystemUiHider.hide();
+                   Intent intent = new Intent(MainActivity.this, RawajalilkaActivity.class);
+                   startActivity(intent);
                }else{
-                       mSystemUiHider.toggle();
+                   mSystemUiHider.toggle();
                 }}});}
     protected void onDestroy(Bundle destroy){
         super.onDestroy();
