@@ -7,13 +7,14 @@ import android.graphics.BitmapFactory;
 import rajawali.BaseObject3D;
 import rajawali.lights.DirectionalLight;
 import rajawali.materials.DiffuseMaterial;
+import rajawali.parser.ObjParser;
 import rajawali.primitives.Sphere;
 import rajawali.renderer.RajawaliRenderer;
 import ru.andraft.surfsup.R;
 
 public class RajawaliRendererka extends RajawaliRenderer {
     private DirectionalLight mLight;
-    private BaseObject3D mSphere;
+    private BaseObject3D mObject;
 
     public RajawaliRendererka(Context context) {
         super(context);
@@ -21,18 +22,16 @@ public class RajawaliRendererka extends RajawaliRenderer {
     }
 
     protected void initScene() {
-        mLight = new DirectionalLight(1f, 0.2f, 1.0f); // set the direction
-        mLight.setColor(1.0f, 1.0f, 1.0f);
-        mLight.setPower(2);
-        Bitmap bg = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher);
-        DiffuseMaterial material = new DiffuseMaterial();
-        mSphere = new Sphere(1, 18, 18);
-        mSphere.setMaterial(material);
-        mSphere.addLight(mLight);
-        mSphere.addTexture(mTextureManager.addTexture(bg));
-        addChild(mSphere);
+        mLight = new DirectionalLight(); // set the direction
+       // mLight.setColor(1.0f, 1.0f, 1.0f);
+       mLight.setPower(2);
+        ObjParser objParser = new ObjParser(mContext.getResources(),mTextureManager,R.raw.andrusha);
+        objParser.parse();
+        mObject = objParser.getParsedObject();
+        mObject.setLight(mLight);
+        addChild(mObject);
 
-        mCamera.setZ(-4.2f);
+        mCamera.setZ(-5.2f);
     }
 
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
@@ -42,6 +41,6 @@ public class RajawaliRendererka extends RajawaliRenderer {
 
     public void onDrawFrame(GL10 glUnused) {
         super.onDrawFrame(glUnused);
-        mSphere.setRotY(mSphere.getRotY() + 1);
+        mObject.setRotY(mObject.getRotY() + 1);
     }
 }

@@ -1,6 +1,7 @@
 package ru.andraft.surfsup;
 
 import android.content.Intent;
+import ru.andraft.surfsup.Rawik.RajawaliRendererka;
 import ru.andraft.surfsup.Rawik.RawajalilkaActivity;
 import ru.andraft.surfsup.util.SystemUiHider;
 import android.annotation.TargetApi;
