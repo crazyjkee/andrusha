@@ -1,8 +1,7 @@
 package ru.andraft.surfsup;
 
 import android.content.Intent;
-import ru.andraft.surfsup.Rawik.RajawaliRendererka;
-import ru.andraft.surfsup.Rawik.RawajalilkaActivity;
+import ru.andraft.surfsup.Rawik.RajawalilkaActivity;
 import ru.andraft.surfsup.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -55,7 +54,7 @@ public class MainActivity extends Activity{
         buttonDummy.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                if(TOGGLE_ON_CLICK){
-                   Intent intent = new Intent(MainActivity.this, RawajalilkaActivity.class);
+                   Intent intent = new Intent(MainActivity.this, RajawalilkaActivity.class);
                    startActivity(intent);
                }else{
                    mSystemUiHider.toggle();
