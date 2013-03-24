@@ -22,7 +22,7 @@ public class RajawalilkaActivity extends RajawaliActivity {
         LinearLayout ll = new LinearLayout(this);
         ll.setOrientation(LinearLayout.VERTICAL);
         TextView label = new TextView(this);
-        label.setText("Табло кароч");
+        label.setText("Табло типа кароч");
         label.setTextColor(Color.BLUE);
         label.setTextSize(20);
         ll.addView(label);
