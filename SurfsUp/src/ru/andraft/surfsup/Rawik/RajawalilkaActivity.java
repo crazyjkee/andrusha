@@ -13,7 +13,7 @@ import rajawali.RajawaliActivity;
  * To change this template use File | Settings | File Templates.
  */
 public class RajawalilkaActivity extends RajawaliActivity {
-    private  RajawaliRendererka mRenderer;
+    private RajawaliRendererka mRenderer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,11 +26,11 @@ public class RajawalilkaActivity extends RajawaliActivity {
         ll.setOrientation(LinearLayout.VERTICAL);
 
         TextView label = new TextView(this);
-        label.setText("Типа кароч табло");
+        label.setText("Типа кароч высветилось");
         label.setTextSize(20);
         ll.addView(label);
 
 
         mLayout.addView(ll);
-}
+    }
 }
